@@ -1,0 +1,17 @@
+{
+    "git.enabled": true,
+    "files.exclude": {
+      "node_modules": true,
+      ".vscode": false,
+      ".gitignore": true,
+      "package.json": true,
+      "package-lock.json": true,
+      "yarn.lock": true,
+      "tailwind.config.cjs": true,
+      "postcss.config.cjs": true,
+      "vite.config.js": true,
+      "readme.md": true,
+      ".gitattributes": true,
+      "public": true
+    }
+  }
