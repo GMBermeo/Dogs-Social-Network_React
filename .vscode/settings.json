@@ -12,7 +12,7 @@
       "vite.config.js": true,
       "readme.md": true,
       ".gitattributes": true,
-      "public": true,
+      // "public": true,
       "dist": true,
     }
   }

@@ -3,7 +3,7 @@
   "name": "Dogs - Social Network for Doggos",
   "icons": [
     {
-      "src": "assets/dogs.svg",
+      "src": "favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"

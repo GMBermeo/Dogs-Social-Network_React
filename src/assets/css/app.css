@@ -7,7 +7,7 @@ body {
   color: #333;
   --type-first: Helvetica, Arial, sans-serif;
   --type-second: "Spectral", Georgia, serif;
-
+  padding-top: 4rem;
   font-family: var(--type-first);
 }
 
@@ -25,6 +25,10 @@ li {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 img {
