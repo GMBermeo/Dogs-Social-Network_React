@@ -4,7 +4,7 @@ import "../assets/css/app.css";
 import Footer from "../components/common/Footer/Footer";
 import Header from "../components/common/Header/Header";
 import Home from "./home";
-import Login from "./login/login";
+import Login from "./login";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login/*" element={<Login />} />
       </Routes>
       <Footer />
     </BrowserRouter>
