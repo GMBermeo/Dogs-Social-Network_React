@@ -1,15 +1,17 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import LoginForm from "../components/auth/LoginView";
-import SignUpView from "../components/auth/SignUpView";
-import ForgotPassword from "../components/auth/ForgotPassword";
-import PasswordReset from "../components/auth/PasswordReset";
+import {
+  LoginView,
+  SignUpView,
+  ForgotPassword,
+  PasswordReset,
+} from "../components/auth";
 
 const Login = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<LoginForm />} />
+        <Route path="/" element={<LoginView />} />
         <Route path="SignUp" element={<SignUpView />} />
         <Route path="ForgotPassword" element={<ForgotPassword />} />
         <Route path="Reset" element={<PasswordReset />} />

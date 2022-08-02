@@ -3,11 +3,10 @@
 }
 
 body {
-  margin: 0;
+  @apply m-0 pt-[4rem];
   color: #333;
   --type-first: Helvetica, Arial, sans-serif;
   --type-second: "Spectral", Georgia, serif;
-  padding-top: 4rem;
   font-family: var(--type-first);
 }
 
@@ -17,35 +16,29 @@ h3,
 h4,
 h5,
 p {
-  margin: 0;
+  @apply m-0;
 }
 
 ul,
 li {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  @apply m-0 list-none p-0;
 }
 
 a {
-  text-decoration: none;
+  @apply no-underline;
 }
 
 img {
-  display: block;
-  max-width: 100%;
+  @apply block max-w-full;
 }
 
 button,
 input {
-  display: block;
-  font-size: 1rem;
+  @apply block text-base;
   font-family: var(--type-first);
   color: #333;
 }
 
 .container {
-  max-width: 50rem;
-  padding: 0 1rem;
-  margin: 0 auto;
+  @apply my-0 mx-auto max-w-[50rem] py-0 px-4;
 }

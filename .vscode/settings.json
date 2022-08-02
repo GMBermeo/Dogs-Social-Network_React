@@ -1,5 +1,5 @@
 {
-  "git.enabled": true,
+  "git.enabled": false,
   "css.lint.unknownAtRules": "ignore",
   "files.exclude": {
     "node_modules": true,

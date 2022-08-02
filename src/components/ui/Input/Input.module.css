@@ -1,7 +1,25 @@
+.wrapper {
+  @apply mb-4;
+}
+
 .label {
-  @apply text-base font-medium;
+  @apply block pb-2 text-base font-medium;
 }
 
 .input {
-  @apply mb-2 w-full rounded-md border-2 border-red-400 px-2 py-1;
+  @apply w-full rounded-md bg-slate-200 p-3 text-base duration-300;
+  border: 1px solid #eee;
+  /* @apply mb-2 w-full rounded-md border-2 border-red-400 px-2 py-1; */
+}
+
+.input:focus,
+.input:hover {
+  @apply bg-white outline-none;
+  border-color: #fb1;
+  box-shadow: 0 0 0 3px #fea;
+}
+
+.error {
+  @apply mt-1 text-sm;
+  color: #f31;
 }
