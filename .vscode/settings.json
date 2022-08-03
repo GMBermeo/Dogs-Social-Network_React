@@ -1,5 +1,5 @@
 {
-  "git.enabled": false,
+  "git.enabled": true,
   "css.lint.unknownAtRules": "ignore",
   "files.exclude": {
     "node_modules": true,
@@ -14,6 +14,8 @@
     "readme.md": true,
     ".gitattributes": true,
     // "public": true,
-    "dist": true
+    "dist": true,
+    "tsconfig.json": true,
+    "src/custom.d.ts": true
   }
 }

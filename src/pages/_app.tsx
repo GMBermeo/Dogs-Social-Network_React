@@ -4,16 +4,19 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Header, Footer } from "../components/common";
 import Home from "./home";
 import Login from "./login";
+import { UserStorage } from "../contexts/UserContext";
 
 function App() {
   return (
     <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login/*" element={<Login />} />
-      </Routes>
-      <Footer />
+      <UserStorage>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login/*" element={<Login />} />
+        </Routes>
+        <Footer />
+      </UserStorage>
     </BrowserRouter>
   );
 }

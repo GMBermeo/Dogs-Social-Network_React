@@ -1,1 +1,1 @@
-export { TOKEN_POST, USER_GET } from "./api";
+export { TOKEN_POST, USER_GET, TOKEN_VALIDATE_POST } from "./api";

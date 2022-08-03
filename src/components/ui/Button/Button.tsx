@@ -1,12 +1,12 @@
 import React from "react";
 import s from "./Button.module.css";
 
-interface Props {
-  children?: React.ReactNode;
-  // any props that come into the component
+interface ButtonProps {
+  // children: React.ReactNode;
+  children: React.ReactNode;
 }
 
-const Button = ({ children, ...props }: Props) => {
+const Button = ({ children, ...props }: ButtonProps) => {
   return (
     <button className={s.button} {...props}>
       {children}

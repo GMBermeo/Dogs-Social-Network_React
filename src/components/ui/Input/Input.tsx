@@ -1,14 +1,15 @@
 import React from "react";
 import s from "./Input.module.css";
 
-interface Props {
-  id: any;
-  label?: any;
-  value?: any;
-  onChange?: any;
-  type?: any;
-  error?: any;
-  onBlur?: any;
+interface InputProps {
+  id: string;
+  label: string;
+  value: string | number;
+  type?: "text" | "password" | "number";
+  error: string | null;
+  onChange: ({ target }: React.ChangeEvent<HTMLInputElement>) => void;
+  onBlur: () => boolean;
+  validate: () => boolean;
 }
 
 const Input = ({
@@ -19,7 +20,7 @@ const Input = ({
   type = "text",
   error,
   onBlur,
-}: Props) => {
+}: InputProps) => {
   return (
     <div className={s.wrapper}>
       <label className={s.label} htmlFor={id}>
@@ -30,8 +31,8 @@ const Input = ({
         id={id}
         name={id}
         type={type}
-        onChange={onChange}
         value={value}
+        onChange={onChange}
         onBlur={onBlur}
       />
       {error && <p className={s.error}>{error}</p>}
