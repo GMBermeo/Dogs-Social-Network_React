@@ -1,5 +1,6 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
+import { UserContext } from "../contexts/UserContext";
 import {
   LoginView,
   SignUpView,
@@ -8,6 +9,9 @@ import {
 } from "../components/auth";
 
 const Login = () => {
+  const { login } = React.useContext(UserContext);
+
+  if (login === true) return <Navigate to="/myAccount" />;
   return (
     <div>
       <Routes>

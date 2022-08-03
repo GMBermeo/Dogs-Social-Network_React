@@ -5,7 +5,7 @@ import { ReactComponent as LogoDogs } from "../../../assets/svg/dogs.svg";
 import { UserContext } from "../../../contexts/UserContext";
 
 const Header = () => {
-  const { data } = React.useContext(UserContext);
+  const { data } = React.useContext(UserContext) || {};
 
   return (
     <header className={s.header}>
@@ -15,7 +15,7 @@ const Header = () => {
         </Link>
         {data ? (
           <Link to="/myAccount" className={s.login}>
-            {data?.nome.charAt(0).toUpperCase() + data.nome.slice(1)}
+            {data?.nome.charAt(0).toUpperCase() + data?.nome.slice(1)}
           </Link>
         ) : (
           <Link to="/login" className={s.login}>

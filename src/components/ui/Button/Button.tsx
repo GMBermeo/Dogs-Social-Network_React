@@ -3,12 +3,13 @@ import s from "./Button.module.css";
 
 interface ButtonProps {
   // children: React.ReactNode;
+  disabled?: boolean;
   children: React.ReactNode;
 }
 
-const Button = ({ children, ...props }: ButtonProps) => {
+const Button = ({ children, disabled, ...props }: ButtonProps) => {
   return (
-    <button className={s.button} {...props}>
+    <button className={s.button} disabled={disabled} {...props}>
       {children}
     </button>
   );

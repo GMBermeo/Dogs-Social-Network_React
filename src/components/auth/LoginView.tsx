@@ -8,7 +8,7 @@ const LoginView = () => {
   const username = useForm();
   const password = useForm();
 
-  const { userLogin, data, error, loading } = React.useContext(UserContext);
+  const { userLogin, error, loading } = React.useContext(UserContext) ?? {};
 
   async function handleLogin(event: { preventDefault: () => void }) {
     event.preventDefault();
@@ -24,8 +24,12 @@ const LoginView = () => {
       <form onSubmit={handleLogin}>
         <Input id="username" label="Username" {...username} />
         <Input id="password" label="Password" type="password" {...password} />
-        <Button>Login</Button>
-        {error && error}
+        {error && <p className="mb-4 text-orange-700">{error}</p>}
+        {loading ? (
+          <Button disabled>Loading...</Button>
+        ) : (
+          <Button>Login</Button>
+        )}
       </form>
       <br></br>
       <Link to="/login/new">Sign Up</Link>
