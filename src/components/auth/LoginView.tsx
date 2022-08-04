@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Input, Button, Error } from "../ui/";
 import useForm from "../../lib/hooks/useForm";
 import { UserContext } from "../../contexts/UserContext";
-import s from "./LoginView.module.css";
+import s from "./auth.module.css";
 import btn from "../../components/ui/Button/Button.module.css";
 
 const LoginView = () => {
@@ -21,7 +21,7 @@ const LoginView = () => {
   }
 
   return (
-    <section className="animeLeft px-6 pt-6">
+    <section className="animeLeft px-6">
       <h1>Login</h1>
       <form onSubmit={handleLogin} className={s.form}>
         <Input id="username" label="Username" {...username} />

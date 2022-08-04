@@ -1,4 +1,5 @@
 import React from "react";
+import s from "../components/auth/auth.module.css";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { UserContext } from "../contexts/UserContext";
 import {
@@ -13,14 +14,16 @@ const Login = () => {
 
   if (login === true) return <Navigate to="/myAccount" />;
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<LoginView />} />
-        <Route path="SignUp" element={<SignUpView />} />
-        <Route path="ForgotPassword" element={<ForgotPassword />} />
-        <Route path="Reset" element={<PasswordReset />} />
-      </Routes>
-    </div>
+    <section className={s.login}>
+      <div className={s.forms}>
+        <Routes>
+          <Route path="/" element={<LoginView />} />
+          <Route path="SignUp" element={<SignUpView />} />
+          <Route path="ForgotPassword" element={<ForgotPassword />} />
+          <Route path="Reset" element={<PasswordReset />} />
+        </Routes>
+      </div>
+    </section>
   );
 };
 

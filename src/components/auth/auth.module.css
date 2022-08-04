@@ -1,3 +1,4 @@
+/* LoginView */
 .form {
   @apply mb-8;
 }
@@ -29,4 +30,20 @@
 .subtitle::after {
   @apply block h-2 w-6 rounded bg-slate-300;
   content: "";
+}
+
+/* pages/login.tsx */
+.login {
+  @apply grid min-h-[94vh] grid-cols-1 gap-4 sm:grid-cols-[1fr_32rem] 2xl:grid-cols-2;
+}
+
+.login::before {
+  @apply hidden sm:block;
+  content: "";
+  background: url("/images/login.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.forms {
+  @apply mx-auto w-full max-w-md p-0 sm:max-w-lg sm:p-4 2xl:max-w-lg;
 }
