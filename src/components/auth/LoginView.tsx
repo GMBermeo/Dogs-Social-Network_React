@@ -40,7 +40,7 @@ const LoginView = () => {
       <div className={s.signup}>
         <h2 className={s.subtitle}>Sign Up</h2>
         <p>Don't have an account?</p>
-        <Link to="/login/new" className={btn.button}>
+        <Link to="/login/signup" className={btn.button}>
           Create new account
         </Link>
       </div>

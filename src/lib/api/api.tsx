@@ -1,11 +1,17 @@
 export const API_URL = "https://dogsapi.origamid.dev/json/";
 
-type body = {
+type bodyLogin = {
   username: string;
   password: string;
 };
 
-export function TOKEN_POST(body: body) {
+type bodySignup = {
+  username: string;
+  password: string;
+  email: string;
+};
+
+export function TOKEN_POST(body: bodyLogin) {
   return {
     url: API_URL + "jwt-auth/v1/token",
     options: {
@@ -38,6 +44,19 @@ export function USER_GET(token: string) {
       headers: {
         Authorization: "Bearer " + token,
       },
+    },
+  };
+}
+
+export function USER_POST(body: bodySignup) {
+  return {
+    url: API_URL + "api/user",
+    options: {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
     },
   };
 }

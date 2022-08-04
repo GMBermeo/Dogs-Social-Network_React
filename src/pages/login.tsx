@@ -18,7 +18,7 @@ const Login = () => {
       <div className={s.forms}>
         <Routes>
           <Route path="/" element={<LoginView />} />
-          <Route path="SignUp" element={<SignUpView />} />
+          <Route path="signup" element={<SignUpView />} />
           <Route path="ForgotPassword" element={<ForgotPassword />} />
           <Route path="Reset" element={<PasswordReset />} />
         </Routes>

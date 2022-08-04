@@ -6,27 +6,27 @@ const types = {
       /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
     message: "Invalid email address.",
   },
+  password: {
+    regex: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/,
+    message:
+      "Passwords must be at least 8 characters and contain at least one number, one uppercase and one lowercase letter, and one special character.",
+  },
 };
 
 const useForm = (type?: string) => {
   const [value, setValue] = React.useState("");
-  const [error, setError] = React.useState<string | null>(null);
+  const [error, setError] = React.useState<string>();
 
   function validate(value: string) {
-    if (type) return true;
     if (value.length === 0) {
       setError("Required.");
       return false;
-    } else if (
-      type != undefined
-        ? types[type as keyof typeof types] &&
-          types[type as keyof typeof types].regex.test(value)
-        : false
-    ) {
-      setError(types[type as keyof typeof types].message);
-      return false;
+    } else if (type !== undefined) {
+      types[type as keyof typeof types].regex.test(value)
+        ? (setError(undefined), true)
+        : (setError(types[type as keyof typeof types].message), false);
     } else {
-      setError(null);
+      setError(undefined);
       return true;
     }
   }

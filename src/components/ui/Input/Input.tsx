@@ -6,10 +6,10 @@ interface InputProps {
   label: string;
   value: string | number;
   type?: "text" | "password" | "number";
-  error: string | null;
+  error: string | undefined;
   onChange: ({ target }: React.ChangeEvent<HTMLInputElement>) => void;
-  onBlur: () => boolean;
-  validate: () => boolean;
+  onBlur: () => boolean | undefined;
+  validate: () => boolean | undefined;
 }
 
 const Input = ({
