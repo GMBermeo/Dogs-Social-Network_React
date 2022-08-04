@@ -1,3 +1,4 @@
 .footer {
-  @apply fixed bottom-0 flex h-[4rem] w-full items-center justify-center bg-[#fb1] text-center;
+  @apply mt-16 flex h-[4rem] w-full items-center justify-center text-center;
+  background: var(--primary-color);
 }

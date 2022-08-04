@@ -1,0 +1,32 @@
+.form {
+  @apply mb-8;
+}
+
+.perdeu {
+  @apply inline-block py-2 leading-none text-slate-400;
+}
+
+.perdeu::after {
+  @apply block w-full bg-current;
+  content: "";
+  height: 2px;
+}
+
+.signup {
+  @apply mt-16;
+}
+
+.signup p {
+  @apply my-8;
+}
+
+.subtitle {
+  @apply leading-none;
+  font-family: var(--type-second);
+  font-size: 2rem;
+}
+
+.subtitle::after {
+  @apply block h-2 w-6 rounded bg-slate-300;
+  content: "";
+}

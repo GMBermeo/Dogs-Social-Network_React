@@ -5,7 +5,7 @@ import { ReactComponent as LogoDogs } from "../../../assets/svg/dogs.svg";
 import { UserContext } from "../../../contexts/UserContext";
 
 const Header = () => {
-  const { data } = React.useContext(UserContext) || {};
+  const { data, userLogout } = React.useContext(UserContext) || {};
 
   return (
     <header className={s.header}>
@@ -14,9 +14,12 @@ const Header = () => {
           <LogoDogs />
         </Link>
         {data ? (
-          <Link to="/myAccount" className={s.login}>
-            {data?.nome.charAt(0).toUpperCase() + data?.nome.slice(1)}
-          </Link>
+          <div className="inline-flex gap-x-4">
+            <Link to="/myAccount" className={s.login}>
+              {data?.nome.charAt(0).toUpperCase() + data?.nome.slice(1)}
+            </Link>
+            <button onClick={userLogout}>Sair</button>
+          </div>
         ) : (
           <Link to="/login" className={s.login}>
             Login / Criar

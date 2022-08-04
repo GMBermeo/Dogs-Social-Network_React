@@ -5,8 +5,9 @@
 body {
   @apply m-0 pt-[4rem];
   color: #333;
+  --primary-color: #fb1;
   --type-first: Helvetica, Arial, sans-serif;
-  --type-second: "Spectral", Georgia, serif;
+  --type-second: "Spectral", georgia, serif;
   font-family: var(--type-first);
 }
 

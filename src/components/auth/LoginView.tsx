@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Input, Button } from "../ui/index";
+import { Input, Button, Error } from "../ui/";
 import useForm from "../../lib/hooks/useForm";
 import { UserContext } from "../../contexts/UserContext";
+import s from "./LoginView.module.css";
+import btn from "../../components/ui/Button/Button.module.css";
 
 const LoginView = () => {
   const username = useForm();
@@ -19,20 +21,29 @@ const LoginView = () => {
   }
 
   return (
-    <section className="px-6 pt-6">
+    <section className="animeLeft px-6 pt-6">
       <h1>Login</h1>
-      <form onSubmit={handleLogin}>
+      <form onSubmit={handleLogin} className={s.form}>
         <Input id="username" label="Username" {...username} />
         <Input id="password" label="Password" type="password" {...password} />
-        {error && <p className="mb-4 text-orange-700">{error}</p>}
+        {error && <Error error={error} />}
         {loading ? (
           <Button disabled>Loading...</Button>
         ) : (
-          <Button>Login</Button>
+          <Button>Log In</Button>
         )}
       </form>
-      <br></br>
-      <Link to="/login/new">Sign Up</Link>
+
+      <Link to="/login/lost" className={s.perdeu}>
+        Lost password?
+      </Link>
+      <div className={s.signup}>
+        <h2 className={s.subtitle}>Sign Up</h2>
+        <p>Don't have an account?</p>
+        <Link to="/login/new" className={btn.button}>
+          Create new account
+        </Link>
+      </div>
     </section>
   );
 };

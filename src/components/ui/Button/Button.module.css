@@ -1,14 +1,14 @@
 .button {
   @apply box-border min-w-[8rem] cursor-pointer rounded-md border-none py-3 px-5 text-base duration-300;
   font-family: var(--type-first);
-  background: #fb1;
+  background: var(--primary-color);
   color: #764701;
 }
 
 .button:hover,
 .button:focus {
   @apply outline-none;
-  box-shadow: 0 0 0 3px #fea, 0 0 0 4px #fb1;
+  box-shadow: 0 0 0 3px #fea, 0 0 0 4px var(--primary-color);
 }
 
 .button:disabled {

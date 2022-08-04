@@ -1,0 +1,13 @@
+#root h1 {
+  @apply relative z-50 my-4 leading-none;
+  font-family: var(--type-second);
+  font-size: 3rem;
+}
+
+#root h1::after {
+  @apply absolute -z-50 block h-6 w-6 rounded;
+  content: "";
+  background: var(--primary-color);
+  bottom: 5px;
+  left: -5px;
+}

@@ -1,5 +1,7 @@
 import React from "react";
 import "../assets/css/app.css";
+import "../assets/css/animations.css";
+import "../assets/css/headings.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Header, Footer } from "../components/common";
 import Home from "./home";

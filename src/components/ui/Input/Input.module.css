@@ -15,7 +15,7 @@
 .input:focus,
 .input:hover {
   @apply bg-white outline-none;
-  border-color: #fb1;
+  border-color: var(--primary-color);
   box-shadow: 0 0 0 3px #fea;
 }
 
