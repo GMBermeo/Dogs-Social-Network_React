@@ -17,14 +17,18 @@ const useForm = (type?: string) => {
   const [value, setValue] = React.useState("");
   const [error, setError] = React.useState<string>();
 
-  function validate(value: string) {
+  function validate(value: string): boolean {
     if (value.length === 0) {
       setError("Required.");
       return false;
     } else if (type !== undefined) {
-      types[type as keyof typeof types].regex.test(value)
-        ? (setError(undefined), true)
-        : (setError(types[type as keyof typeof types].message), false);
+      if (types[type as keyof typeof types].regex.test(value)) {
+        setError(undefined);
+        return true;
+      } else {
+        setError(types[type as keyof typeof types].message);
+        return false;
+      }
     } else {
       setError(undefined);
       return true;

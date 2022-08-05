@@ -18,11 +18,10 @@ const Header = () => {
             <Link to="/myAccount" className={s.login}>
               {data?.nome.charAt(0).toUpperCase() + data?.nome.slice(1)}
             </Link>
-            <button onClick={userLogout}>Sair</button>
           </div>
         ) : (
           <Link to="/login" className={s.login}>
-            Login / Criar
+            Login / Sign Up
           </Link>
         )}
       </nav>

@@ -1,7 +1,7 @@
 import React from "react";
 
 interface ErrorProps {
-  error: string | null;
+  error: string | undefined;
 }
 
 const Error = ({ error }: ErrorProps) => {
