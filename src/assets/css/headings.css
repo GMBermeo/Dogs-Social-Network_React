@@ -1,5 +1,5 @@
 #root h1 {
-  @apply relative z-50 my-4 leading-none;
+  @apply relative z-40 my-4 leading-none;
   font-family: var(--type-second);
   font-size: 3rem;
 }
