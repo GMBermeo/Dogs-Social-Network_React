@@ -12,7 +12,7 @@ interface InputProps {
   validate: () => boolean | undefined;
 }
 
-const Input = ({
+export const Input = ({
   id,
   label,
   value,
@@ -39,5 +39,3 @@ const Input = ({
     </div>
   );
 };
-
-export default Input;

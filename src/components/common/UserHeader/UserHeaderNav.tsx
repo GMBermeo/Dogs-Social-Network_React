@@ -8,7 +8,7 @@ import { ReactComponent as StatsIcon } from "../../../assets/svg/stats.svg";
 import { ReactComponent as PostIcon } from "../../../assets/svg/post.svg";
 import { ReactComponent as LogoutIcon } from "../../../assets/svg/logout.svg";
 
-const UserHeaderNav = () => {
+export const UserHeaderNav = () => {
   const { userLogout } = React.useContext(UserContext);
   const mobile = useMedia("(max-width: 40rem)");
   const [mobileMenu, setMobileMenu] = React.useState(false);
@@ -57,5 +57,3 @@ const UserHeaderNav = () => {
     </>
   );
 };
-
-export default UserHeaderNav;

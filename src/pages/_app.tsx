@@ -1,16 +1,14 @@
 import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "../assets/css/app.css";
 import "../assets/css/animations.css";
 import "../assets/css/headings.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Home, Login, User } from "./";
 import { Header, Footer } from "../components/common";
-import { PrivateRoute } from "../components/auth/";
-import Home from "./home";
-import Login from "./login";
-import User from "./user";
+import { PrivateRoute } from "../components/auth";
 import { UserStorage } from "../contexts/UserContext";
 
-function App() {
+export function App() {
   return (
     <BrowserRouter>
       <UserStorage>
@@ -32,5 +30,3 @@ function App() {
     </BrowserRouter>
   );
 }
-
-export default App;

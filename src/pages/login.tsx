@@ -9,7 +9,7 @@ import {
   PasswordReset,
 } from "../components/auth";
 
-const Login = () => {
+export const Login = () => {
   const { login } = React.useContext(UserContext);
 
   if (login === true) return <Navigate to="/myAccount" />;
@@ -26,5 +26,3 @@ const Login = () => {
     </section>
   );
 };
-
-export default Login;

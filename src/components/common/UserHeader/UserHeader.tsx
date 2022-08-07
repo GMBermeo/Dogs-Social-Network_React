@@ -1,8 +1,8 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import UserHeaderNav from "./UserHeaderNav";
+import { UserHeaderNav } from "./UserHeaderNav";
 
-const UserHeader = () => {
+export const UserHeader = () => {
   const [title, setTitle] = React.useState("");
   const location = useLocation();
 
@@ -20,5 +20,3 @@ const UserHeader = () => {
     </header>
   );
 };
-
-export default UserHeader;

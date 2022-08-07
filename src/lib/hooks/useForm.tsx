@@ -13,7 +13,7 @@ const types = {
   },
 };
 
-const useForm = (type?: string) => {
+export const useForm = (type?: string) => {
   const [value, setValue] = React.useState("");
   const [error, setError] = React.useState<string>();
 
@@ -51,5 +51,3 @@ const useForm = (type?: string) => {
     onBlur: () => validate(value),
   };
 };
-
-export default useForm;

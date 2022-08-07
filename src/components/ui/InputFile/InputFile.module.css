@@ -1,0 +1,11 @@
+.wrapper {
+  @apply mb-4 mt-2;
+}
+
+.label {
+  @apply text-base font-medium;
+}
+
+.input {
+  @apply mt-2 block w-full text-sm text-slate-500 file:mr-4 file:rounded-full file:border-0 file:bg-yellow-200 file:py-2 file:px-4 file:text-sm  file:text-yellow-700 hover:file:bg-yellow-100;
+}

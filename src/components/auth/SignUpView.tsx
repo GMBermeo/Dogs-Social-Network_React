@@ -4,7 +4,7 @@ import { USER_POST } from "../../lib/api";
 import { useForm, useFetch } from "../../lib/hooks/";
 import { Button, Error, Input } from "../ui";
 
-const SignUpView = () => {
+export const SignUpView = () => {
   const username = useForm();
   const email = useForm("email");
   const password = useForm("password");
@@ -43,5 +43,3 @@ const SignUpView = () => {
     </section>
   );
 };
-
-export default SignUpView;

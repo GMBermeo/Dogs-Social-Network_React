@@ -1,3 +1,4 @@
-export { default as Button } from "./Button/Button";
-export { default as Input } from "./Input/Input";
-export { default as Error } from "./Helper/Error";
+export { Button } from "./Button/Button";
+export { Input } from "./Input/Input";
+export { InputFile } from "./InputFile/InputFile";
+export { Error } from "./Helper/Error";

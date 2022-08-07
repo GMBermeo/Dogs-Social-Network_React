@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { ReactComponent as LogoDogs } from "../../../assets/svg/dogs.svg";
 import { UserContext } from "../../../contexts/UserContext";
 
-const Header = () => {
+export const Header = () => {
   const { data, userLogout } = React.useContext(UserContext) || {};
 
   return (
@@ -28,5 +28,3 @@ const Header = () => {
     </header>
   );
 };
-
-export default Header;

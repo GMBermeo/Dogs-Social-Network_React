@@ -1,0 +1,17 @@
+.photoPost {
+  @apply mb-8 grid grid-cols-2 gap-8;
+}
+
+.photoPost img {
+  @apply mb-4;
+}
+
+.preview {
+  @apply rounded-lg bg-cover bg-center;
+}
+
+.preview::after {
+  @apply block h-0;
+  content: "";
+  padding-bottom: 100%;
+}

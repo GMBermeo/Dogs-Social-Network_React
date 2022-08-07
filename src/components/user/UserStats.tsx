@@ -1,7 +1,5 @@
 import React from "react";
 
-const UserStats = () => {
+export const UserStats = () => {
   return <div>UserStats</div>;
 };
-
-export default UserStats;

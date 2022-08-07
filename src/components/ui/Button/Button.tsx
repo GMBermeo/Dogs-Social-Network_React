@@ -7,12 +7,10 @@ interface ButtonProps {
   children: React.ReactNode;
 }
 
-const Button = ({ children, disabled, ...props }: ButtonProps) => {
+export const Button = ({ children, disabled, ...props }: ButtonProps) => {
   return (
     <button className={s.button} disabled={disabled} {...props}>
       {children}
     </button>
   );
 };
-
-export default Button;

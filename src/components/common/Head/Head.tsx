@@ -1,7 +1,5 @@
 import React from "react";
 
-const Head = () => {
+export const Head = () => {
   return <div>Head</div>;
 };
-
-export default Head;

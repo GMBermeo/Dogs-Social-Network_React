@@ -1,4 +1,4 @@
-export { default as UserHeader } from "../common/UserHeader/UserHeader";
-export { default as UserHeaderNav } from "../common/UserHeader/UserHeaderNav";
-export { default as UserPhotoPost } from "./UserPhotoPost";
-export { default as UserStats } from "./UserStats";
+export { UserHeader } from "../common/UserHeader/UserHeader";
+export { UserHeaderNav } from "../common/UserHeader/UserHeaderNav";
+export { UserPhotoPost } from "./UserPhotoPost";
+export { UserStats } from "./UserStats";

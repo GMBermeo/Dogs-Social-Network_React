@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Input, Button, Error } from "../ui/";
-import useForm from "../../lib/hooks/useForm";
+import { useForm } from "../../lib/hooks/";
 import { UserContext } from "../../contexts/UserContext";
 import s from "./auth.module.css";
 import btn from "../../components/ui/Button/Button.module.css";
 
-const LoginView = () => {
+export const LoginView = () => {
   const username = useForm();
   const password = useForm();
 
@@ -47,5 +47,3 @@ const LoginView = () => {
     </section>
   );
 };
-
-export default LoginView;

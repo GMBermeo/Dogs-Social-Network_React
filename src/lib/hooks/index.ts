@@ -1,2 +1,2 @@
-export { default as useFetch } from "./useFetch";
-export { default as useForm } from "./useForm";
+export { useFetch } from "./useFetch";
+export { useForm } from "./useForm";

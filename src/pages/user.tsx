@@ -1,9 +1,9 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { UserHeader, UserPhotoPost, UserStats } from "../components/user";
-import Feed from "../components/feed/Feed";
+import { Feed } from "../components/feed/Feed";
 
-const User = () => {
+export const User = () => {
   return (
     <section className="container">
       <UserHeader />
@@ -15,5 +15,3 @@ const User = () => {
     </section>
   );
 };
-
-export default User;

@@ -3,12 +3,13 @@ import React from "react";
 interface FetchOptions {
   method: string;
   headers: {
-    "Content-Type": string;
+    "Content-Type"?: string;
+    Authorization?: string;
   };
-  body: string;
+  body: string | FormData;
 }
 
-const useFetch = () => {
+export const useFetch = () => {
   const [data, setData] = React.useState();
   const [error, setError] = React.useState<string>();
   const [loading, setLoading] = React.useState(false);
@@ -42,5 +43,3 @@ const useFetch = () => {
 
   return { data, error, loading, request };
 };
-
-export default useFetch;
