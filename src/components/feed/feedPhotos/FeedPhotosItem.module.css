@@ -1,0 +1,26 @@
+.photo:nth-child(2) {
+  @apply col-[initial] row-[initial] sm:col-span-2 sm:row-span-2;
+}
+
+.photo {
+  @apply grid cursor-pointer place-content-center overflow-hidden;
+}
+
+.photo img {
+  @apply rounded;
+  grid-area: 1/1;
+}
+
+.photo span {
+  @apply flex items-center justify-center text-white opacity-0 duration-100 hover:opacity-100;
+  background: rgba(0, 0, 0, 0.3);
+  grid-area: 1/1;
+}
+
+.photo span::before {
+  @apply mr-1 inline-block;
+  content: "";
+  width: 16px;
+  height: 10px;
+  background: url("../../../assets/svg/views.svg") no-repeat;
+}

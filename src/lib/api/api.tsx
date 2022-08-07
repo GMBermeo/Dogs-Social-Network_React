@@ -11,6 +11,12 @@ type bodySignup = {
   email: string;
 };
 
+type photosGet = {
+  page: number;
+  total: number;
+  user: number;
+};
+
 export function TOKEN_POST(body: bodyLogin) {
   return {
     url: API_URL + "jwt-auth/v1/token",
@@ -70,6 +76,16 @@ export function PHOTO_POST(formData: FormData, token: string) {
         Authorization: "Bearer " + token,
       },
       body: formData,
+    },
+  };
+}
+
+export function PHOTOS_GET({ page, total, user }: photosGet) {
+  return {
+    url: `${API_URL}api/photo/?_page=${page}&_total=${total}&_user=${user}`,
+    options: {
+      method: "GET",
+      cache: "no-store",
     },
   };
 }

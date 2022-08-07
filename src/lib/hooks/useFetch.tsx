@@ -2,15 +2,16 @@ import React from "react";
 
 interface FetchOptions {
   method: string;
-  headers: {
+  headers?: {
     "Content-Type"?: string;
     Authorization?: string;
+    cache?: string;
   };
-  body: string | FormData;
+  body?: string | FormData;
 }
 
 export const useFetch = () => {
-  const [data, setData] = React.useState();
+  const [data, setData] = React.useState<any>();
   const [error, setError] = React.useState<string>();
   const [loading, setLoading] = React.useState(false);
 

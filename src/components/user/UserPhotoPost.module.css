@@ -1,5 +1,5 @@
 .photoPost {
-  @apply mb-8 grid grid-cols-2 gap-8;
+  @apply mb-8 grid grid-cols-1 gap-8 md:grid-cols-2;
 }
 
 .photoPost img {
@@ -7,7 +7,7 @@
 }
 
 .preview {
-  @apply rounded-lg bg-cover bg-center;
+  @apply aspect-square rounded-xl bg-cover bg-center;
 }
 
 .preview::after {

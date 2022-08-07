@@ -43,3 +43,7 @@ input {
 .container {
   @apply my-0 mx-auto max-w-[50rem] py-0 px-4;
 }
+
+.mainContainer {
+  @apply mt-12;
+}
