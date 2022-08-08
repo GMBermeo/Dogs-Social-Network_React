@@ -1,8 +1,5 @@
 import React from "react";
-
-interface ErrorProps {
-  error: string | undefined;
-}
+import { ErrorProps } from "../../../lib/types/Errors";
 
 export const Error = ({ error }: ErrorProps) => {
   if (!error) return null;

@@ -1,4 +1,5 @@
 import React from "react";
+import { Photo, PhotoDetails } from "../types/Photo";
 
 interface FetchOptions {
   method: string;
@@ -11,7 +12,7 @@ interface FetchOptions {
 }
 
 export const useFetch = () => {
-  const [data, setData] = React.useState<any>();
+  const [data, setData] = React.useState<Photo[]>();
   const [error, setError] = React.useState<string>();
   const [loading, setLoading] = React.useState(false);
 

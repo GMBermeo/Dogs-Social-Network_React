@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { UserContext } from "../../../contexts/UserContext";
-import { useMedia } from "../../../lib/hooks/useMedia";
+import { useMedia } from "../../../lib/hooks";
 import s from "./UserHeaderNav.module.css";
 import { ReactComponent as FeedIcon } from "../../../assets/svg/feed.svg";
 import { ReactComponent as StatsIcon } from "../../../assets/svg/stats.svg";

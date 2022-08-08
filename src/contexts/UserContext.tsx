@@ -1,26 +1,7 @@
 import React from "react";
 import { TOKEN_POST, USER_GET, TOKEN_VALIDATE_POST } from "../lib/api";
 import { useNavigate } from "react-router-dom";
-
-interface UserData {
-  email: string;
-  id: number;
-  nome: string;
-  username: string;
-}
-
-interface UserContextValue {
-  data: UserData | undefined;
-  error: string | undefined;
-  loading: boolean;
-  login: boolean;
-  userLogin: (username: string, password: string) => void;
-  userLogout: () => void;
-}
-
-interface UserContext<T> {
-  children?: React.ReactNode | undefined;
-}
+import { UserData, UserContextValue } from "../lib/types/User";
 
 export const UserContext = React.createContext<UserContextValue>(null as any);
 

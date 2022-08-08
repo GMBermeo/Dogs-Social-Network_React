@@ -1,11 +1,6 @@
 import React from "react";
 import s from "./Button.module.css";
-
-interface ButtonProps {
-  // children: React.ReactNode;
-  disabled?: boolean;
-  children: React.ReactNode;
-}
+import { ButtonProps } from "../../../lib/types/Button";
 
 export const Button = ({ children, disabled, ...props }: ButtonProps) => {
   return (
