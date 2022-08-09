@@ -1,13 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ModalContext } from "../../../contexts/ModalContext";
+import { Photo } from "../../../lib/types/Photo";
 import { PhotoComments } from "./PhotoComments";
 import s from "./PhotoContent.module.css";
 
 export const PhotoContent = () => {
   const { modalPhoto } = React.useContext(ModalContext);
 
-  console.log("data: ", modalPhoto);
+  console.log("PhotoContent.data: ", modalPhoto);
 
   return (
     <div className={s.photo}>
@@ -16,12 +17,13 @@ export const PhotoContent = () => {
       </div>
       <div className={s.details}>
         <div>
-          <p>
+          <p className={s.author}>
             <Link to={`/profile/${modalPhoto.author}`}>
               @{modalPhoto.author}
             </Link>
+
+            <span className={s.views}>{modalPhoto.acessos}</span>
           </p>
-          <span className={s.visualizacoes}>{modalPhoto.acessos}</span>
           <h1 className="title">
             <Link to={`/photo/${modalPhoto.id}`}>{modalPhoto.title}</Link>
           </h1>
@@ -34,7 +36,7 @@ export const PhotoContent = () => {
           </ul>
         </div>
       </div>
-      <PhotoComments />
+      <PhotoComments id={modalPhoto.id} />
     </div>
   );
 };

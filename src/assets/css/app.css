@@ -41,9 +41,10 @@ input {
 }
 
 .container {
-  @apply my-0 mx-auto max-w-[50rem] py-0 px-4;
+  @apply my-0 mx-auto py-0 px-4;
+  max-width: 50rem !important;
 }
 
 .mainContainer {
-  @apply mt-12;
+  @apply mt-8 md:mt-12 xl:mt-16;
 }

@@ -8,10 +8,16 @@ import { PhotoContent } from "../ui/";
 
 export const FeedModal = () => {
   const { data, error, loading, request } = useFetch();
-  const { modalPhoto } = React.useContext(ModalContext);
+  const { modalPhoto, setModal } = React.useContext(ModalContext);
+
+  function handleOutsideClick(event: any) {
+    if (event.target === event.currentTarget) {
+      setModal();
+    }
+  }
 
   return (
-    <div className={s.modal}>
+    <div className={s.modal} onClick={handleOutsideClick}>
       {error && <Error error={error} />}
       {loading && <Loading />}
       {/* {data && <img src={data[0].src} alt={data[0].title} />} */}

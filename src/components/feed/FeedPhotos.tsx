@@ -10,7 +10,7 @@ export const FeedPhotos = () => {
   const { data, loading, error, request } = useFetch();
 
   React.useEffect(() => {
-    async function fetchPhotos() {
+    async function fetchPhotos(): Promise<void> {
       const { url, options } = PHOTOS_GET({ page: 1, total: 6, user: 0 });
       const { json } = await request(url, options);
     }

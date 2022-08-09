@@ -1,0 +1,5 @@
+.modal {
+  @apply fixed top-0 left-0 flex h-screen w-screen overflow-scroll py-4 pl-8 pr-[calc(2rem+15px)] md:py-8 md:pl-16 md:pr-[calc(4rem+15px)];
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.4);
+}

@@ -8,8 +8,6 @@ export const Feed = () => {
   const { modalOpen } = React.useContext(ModalContext);
   // const [modalPhoto, setModalPhoto] = React.useState<Photo>();
 
-  console.log(modalOpen);
-
   return (
     <div>
       {modalOpen && <FeedModal />}

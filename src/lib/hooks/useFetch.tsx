@@ -12,7 +12,8 @@ interface FetchOptions {
 }
 
 export const useFetch = () => {
-  const [data, setData] = React.useState<Photo[]>();
+  // const [data, setData] = React.useState<Photo[] | PhotoDetails>();
+  const [data, setData] = React.useState<any>();
   const [error, setError] = React.useState<string>();
   const [loading, setLoading] = React.useState(false);
 

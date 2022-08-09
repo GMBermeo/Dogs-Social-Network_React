@@ -9,11 +9,11 @@ export const ModalStorage = ({ children }: any) => {
 
   function openModal(photo: Photo) {
     setModalPhoto(photo);
-    setModalOpen(!modalOpen);
+    setModal();
   }
 
-  function closeModal() {
-    setModalOpen(false);
+  function setModal() {
+    setModalOpen(!modalOpen);
   }
 
   console.log(modalPhoto);
@@ -21,7 +21,7 @@ export const ModalStorage = ({ children }: any) => {
 
   return (
     <ModalContext.Provider
-      value={{ modalPhoto, openModal, modalOpen, closeModal, setModalPhoto }}
+      value={{ modalPhoto, openModal, modalOpen, setModal, setModalPhoto }}
     >
       {children}
     </ModalContext.Provider>
