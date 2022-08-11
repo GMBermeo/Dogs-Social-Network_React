@@ -1,7 +1,7 @@
 import { API_URL } from "./_url";
-import { BodyLogin } from "../types/Api";
+import { TBodyLogin } from "../types/TApi";
 
-export function TOKEN_POST(body: BodyLogin) {
+export function TOKEN_POST(body: TBodyLogin) {
   return {
     url: API_URL + "jwt-auth/v1/token",
     options: {

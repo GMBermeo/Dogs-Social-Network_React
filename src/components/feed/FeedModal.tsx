@@ -4,7 +4,7 @@ import s from "./FeedModal.module.css";
 import { PHOTO_GET } from "../../lib/api";
 import { ModalContext } from "../../contexts/ModalContext";
 import { Error, Loading } from "../ui/";
-import { PhotoContent } from "../ui/";
+import { PhotoContent } from "../photo/PhotoContent";
 
 export const FeedModal = () => {
   const { data, error, loading, request } = useFetch();

@@ -1,9 +1,9 @@
 import React from "react";
-import { Photo } from "../../lib/types/Photo";
+import { TPhoto } from "../../lib/types/TPhoto";
 import s from "./FeedPhotosItem.module.css";
 import { ModalContext } from "../../contexts/ModalContext";
 
-export const FeedPhotosItem = (props: { photo: Photo }) => {
+export const FeedPhotosItem = (props: { photo: TPhoto }) => {
   const { openModal, setModalPhoto } = React.useContext(ModalContext);
 
   function openPhotoModal() {

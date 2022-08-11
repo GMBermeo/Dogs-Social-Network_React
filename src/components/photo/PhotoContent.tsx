@@ -1,14 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ModalContext } from "../../../contexts/ModalContext";
-import { Photo } from "../../../lib/types/Photo";
+import { ModalContext } from "../../contexts/ModalContext";
 import { PhotoComments } from "./PhotoComments";
 import s from "./PhotoContent.module.css";
 
 export const PhotoContent = () => {
   const { modalPhoto } = React.useContext(ModalContext);
-
-  console.log("PhotoContent.data: ", modalPhoto);
 
   return (
     <div className={s.photo}>

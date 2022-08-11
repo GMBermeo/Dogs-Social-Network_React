@@ -1,12 +1,12 @@
 import React from "react";
 import { TOKEN_POST, USER_GET, TOKEN_VALIDATE_POST } from "../lib/api";
 import { useNavigate } from "react-router-dom";
-import { UserData, UserContextValue } from "../lib/types/User";
+import { TUserData, TUserContextValue } from "../lib/types/TUser";
 
-export const UserContext = React.createContext<UserContextValue>(null as any);
+export const UserContext = React.createContext<TUserContextValue>(null as any);
 
 export const UserStorage = ({ children }: any) => {
-  const [data, setData] = React.useState<UserData>();
+  const [data, setData] = React.useState<TUserData>();
   const [login, setLogin] = React.useState(false);
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string>();

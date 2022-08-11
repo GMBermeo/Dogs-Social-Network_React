@@ -1,12 +1,12 @@
-export interface UserData {
+export interface TUserData {
   email: string;
   id: number;
   nome: string;
   username: string;
 }
 
-export interface UserContextValue {
-  data: UserData | undefined;
+export interface TUserContextValue {
+  data: TUserData | undefined;
   error: string | undefined;
   loading: boolean;
   login: boolean;

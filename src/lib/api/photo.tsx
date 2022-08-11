@@ -1,5 +1,5 @@
 import { API_URL } from "./_url";
-import { PhotosGet } from "../types/Api";
+import { TPhotosGet } from "../types/TApi";
 
 export function PHOTO_POST(formData: FormData, token: string) {
   return {
@@ -14,7 +14,7 @@ export function PHOTO_POST(formData: FormData, token: string) {
   };
 }
 
-export function PHOTOS_GET({ page, total, user }: PhotosGet) {
+export function PHOTOS_GET({ page, total, user }: TPhotosGet) {
   return {
     url: `${API_URL}api/photo/?_page=${page}&_total=${total}&_user=${user}`,
     options: {

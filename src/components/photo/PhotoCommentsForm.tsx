@@ -1,11 +1,11 @@
 import React from "react";
-import { ModalContext } from "../../../contexts/ModalContext";
-import { UserContext } from "../../../contexts/UserContext";
-import { ReactComponent as SendSVG } from "../../../assets/svg/send.svg";
-import { useFetch } from "../../../lib/hooks";
-import { COMMENT_POST } from "../../../lib/api";
-import { Comment } from "../../../lib/types/Comment";
-import { Error } from "../Helper/Error";
+import { ModalContext } from "../../contexts/ModalContext";
+import { UserContext } from "../../contexts/UserContext";
+import { ReactComponent as SendSVG } from "../../assets/svg/send.svg";
+import { useFetch } from "../../lib/hooks";
+import { COMMENT_POST } from "../../lib/api";
+import { Error } from "../ui/Helper/Error";
+import s from "./PhotoCommentsForm.module.css";
 
 export const PhotoCommentForm = ({ setComments }: any) => {
   const { request, error } = useFetch();
@@ -23,18 +23,17 @@ export const PhotoCommentForm = ({ setComments }: any) => {
     }
   }
 
-  console.log("PhotoCommentForm: modalPhoto.id ", modalPhoto.id);
-
   return (
-    <form onSubmit={sendComment}>
+    <form onSubmit={sendComment} className={s.form}>
       <textarea
         id="comment"
         name="comment"
         placeholder="Write a comment..."
         value={comment}
         onChange={({ target }) => setComment(target.value)}
+        className={s.textarea}
       />
-      <button>
+      <button className={s.button}>
         <SendSVG />
       </button>
       <Error error={error} />

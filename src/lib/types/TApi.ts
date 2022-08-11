@@ -1,15 +1,15 @@
-export interface BodyLogin {
+export interface TBodyLogin {
   username: string;
   password: string;
 }
 
-export interface BodySignup {
+export interface TBodySignup {
   username: string;
   password: string;
   email: string;
 }
 
-export interface PhotosGet {
+export interface TPhotosGet {
   page: number;
   total: number;
   user: number;

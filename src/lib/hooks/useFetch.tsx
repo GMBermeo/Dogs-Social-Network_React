@@ -1,5 +1,5 @@
 import React from "react";
-import { Photo, PhotoDetails } from "../types/Photo";
+import { TPhoto, TPhotoDetails } from "../types/TPhoto";
 
 interface FetchOptions {
   method: string;

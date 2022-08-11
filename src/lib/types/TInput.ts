@@ -1,4 +1,4 @@
-export interface InputProps {
+export interface TInputProps {
   id: string;
   label: string;
   value: string | number;
@@ -6,5 +6,5 @@ export interface InputProps {
   error: string | undefined;
   onChange: ({ target }: React.ChangeEvent<HTMLInputElement>) => void;
   onBlur: () => boolean | undefined;
-  validate: () => boolean | undefined;
+  validate: () => boolean;
 }

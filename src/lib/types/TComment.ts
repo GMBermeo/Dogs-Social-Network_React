@@ -1,4 +1,4 @@
-export interface Comment {
+export interface TComment {
   comment_ID: number;
   comment_agent: string;
   comment_approved: number;

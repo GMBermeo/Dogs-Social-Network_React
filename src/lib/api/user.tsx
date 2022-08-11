@@ -1,5 +1,5 @@
 import { API_URL } from "./_url";
-import { BodySignup } from "../types/Api";
+import { TBodySignup } from "../types/TApi";
 
 export function USER_GET(token: string) {
   return {
@@ -13,7 +13,7 @@ export function USER_GET(token: string) {
   };
 }
 
-export function USER_POST(body: BodySignup) {
+export function USER_POST(body: TBodySignup) {
   return {
     url: API_URL + "api/user",
     options: {

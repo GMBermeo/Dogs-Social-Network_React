@@ -1,39 +1,37 @@
 import React from "react";
-import { UserContext } from "../../../contexts/UserContext";
-import { PHOTO_GET } from "../../../lib/api";
-import { useFetch } from "../../../lib/hooks";
-import { Comment } from "../../../lib/types/Comment";
-import { PhotoCommentForm } from "./PhotoCommentForm";
+import { UserContext } from "../../contexts/UserContext";
+import { PHOTO_GET } from "../../lib/api";
+import { useFetch } from "../../lib/hooks";
+import { TComment } from "../../lib/types/TComment";
+import { PhotoCommentForm } from "./PhotoCommentsForm";
 import s from "./PhotoComments.module.css";
 
 export const PhotoComments = (props: { id: number }) => {
-  let tempComments: Comment[] = [];
+  const commentsSection = React.useRef<any>(null);
   const { login } = React.useContext(UserContext);
-  const [comments, setComments] = React.useState<Comment[]>(tempComments);
+  const [comments, setComments] = React.useState<TComment[]>();
   const { data, loading, error, request } = useFetch();
 
   React.useEffect(() => {
-    async function fetchComments() {
-      console.log("fetch Comments id", props.id);
+    const fetchData = async () => {
       const { url, options } = PHOTO_GET(props.id);
       const { json } = await request(url, options);
-      tempComments = await json.comments;
-      setComments(tempComments);
-    }
-    fetchComments();
+      const jsonComments = await json.comments;
+      setComments(jsonComments);
+    };
+    fetchData();
   }, [props.id]);
 
   React.useEffect(() => {
-    setComments(tempComments);
-  }, [request]);
-
-  console.log("renderizou Comments");
+    if (commentsSection.current) {
+      commentsSection.current.scrollTop = commentsSection.current.scrollHeight;
+    }
+  }, [comments]);
 
   loading && <p>Loading...</p>;
   return (
     <>
-      <h2>Comments</h2>
-      <ul className={s.comments}>
+      <ul ref={commentsSection} className={s.comments}>
         {comments &&
           comments.map((comment) => (
             <li key={comment.comment_ID}>

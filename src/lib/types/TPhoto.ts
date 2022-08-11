@@ -1,6 +1,6 @@
-import { Comment } from "./Comment";
+import { TComment } from "./TComment";
 
-export interface Photo {
+export interface TPhoto {
   acessos: number;
   author: string;
   date: string;
@@ -12,7 +12,7 @@ export interface Photo {
   total_comments: string;
 }
 
-export interface PhotoDetails {
-  comments: Comment[];
-  photo: Photo;
+export interface TPhotoDetails {
+  comments: TComment[];
+  photo: TPhoto;
 }
