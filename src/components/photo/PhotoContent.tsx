@@ -1,11 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ModalContext } from "../../contexts/ModalContext";
+import { UserContext } from "../../contexts/UserContext";
 import { PhotoComments } from "./PhotoComments";
 import s from "./PhotoContent.module.css";
+import { PhotoDelete } from "./PhotoDelete";
 
 export const PhotoContent = () => {
   const { modalPhoto } = React.useContext(ModalContext);
+  const user = React.useContext(UserContext);
 
   return (
     <div className={s.photo}>
@@ -15,9 +18,13 @@ export const PhotoContent = () => {
       <div className={s.details}>
         <div>
           <p className={s.author}>
-            <Link to={`/profile/${modalPhoto.author}`}>
-              @{modalPhoto.author}
-            </Link>
+            {user.data && user.data.username === modalPhoto.author ? (
+              <PhotoDelete id={modalPhoto.id} />
+            ) : (
+              <Link to={`/profile/${modalPhoto.author}`}>
+                @{modalPhoto.author}
+              </Link>
+            )}
 
             <span className={s.views}>{modalPhoto.acessos}</span>
           </p>
