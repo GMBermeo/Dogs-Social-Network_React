@@ -56,7 +56,11 @@ export const UserPhotoPost = () => {
         <Input id="peso" label="Weight" type="number" {...peso} />
         <Input id="idade" label="Age" type="number" {...idade} />
         <InputFile id="img" label="Photo" onChange={handleImgChange} />
-        {loading ? <Button>Uploading...</Button> : <Button>Post</Button>}
+        {loading ? (
+          <Button disabled>Uploading...</Button>
+        ) : (
+          <Button>Post</Button>
+        )}
         {error && <Error error={error} />}
       </form>
 

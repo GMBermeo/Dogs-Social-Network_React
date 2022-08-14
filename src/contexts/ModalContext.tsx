@@ -8,7 +8,7 @@ export const ModalStorage = ({ children }: any) => {
   const [modalPhoto, setModalPhoto] = React.useState<TPhoto | TPhotoDetails>();
   const [modalOpen, setModalOpen] = React.useState(false);
 
-  function openModal(photo: TPhoto) {
+  function openModal(photo: TPhoto | TPhotoDetails) {
     setModalPhoto(photo);
     setModal();
   }

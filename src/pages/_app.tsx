@@ -7,25 +7,28 @@ import { Home, Login, User } from "./";
 import { Header, Footer } from "../components/common";
 import { PrivateRoute } from "../components/auth";
 import { UserStorage } from "../contexts/UserContext";
+import { ModalStorage } from "../contexts/ModalContext";
 
 export function App() {
   return (
     <BrowserRouter>
       <UserStorage>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="login/*" element={<Login />} />
-          <Route
-            path="myAccount/*"
-            element={
-              <PrivateRoute>
-                <User />
-              </PrivateRoute>
-            }
-          />
-        </Routes>
-        <Footer />
+        <ModalStorage>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="login/*" element={<Login />} />
+            <Route
+              path="myAccount/*"
+              element={
+                <PrivateRoute>
+                  <User />
+                </PrivateRoute>
+              }
+            />
+          </Routes>
+          <Footer />
+        </ModalStorage>
       </UserStorage>
     </BrowserRouter>
   );
