@@ -6,7 +6,7 @@
   @apply grid cursor-pointer place-content-center overflow-hidden;
 }
 
-.photo img {
+.photo > div {
   @apply rounded;
   grid-area: 1/1;
 }

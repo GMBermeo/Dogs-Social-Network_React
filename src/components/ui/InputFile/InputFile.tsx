@@ -1,17 +1,8 @@
 import React from "react";
 import s from "./InputFile.module.css";
+import { TInputFileProps } from "../../../lib/types/TInputFile";
 
-interface InputFileProps {
-  id: string;
-  label: string;
-  //   value: string | number;
-  //   error: string | undefined;
-  onChange: ({ target }: React.ChangeEvent<HTMLInputElement>) => void;
-  //   onBlur: () => boolean | undefined;
-  //   validate: () => boolean | undefined;
-}
-
-export const InputFile = ({ id, label, ...props }: InputFileProps) => {
+export const InputFile = ({ id, label, ...props }: TInputFileProps) => {
   return (
     <div className={s.wrapper}>
       <label htmlFor={id} className={s.label}>

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ModalContext } from "../../contexts/ModalContext";
 import { UserContext } from "../../contexts/UserContext";
+import { Image } from "../ui/";
 import { PhotoComments } from "./PhotoComments";
 import s from "./PhotoContent.module.css";
 import { PhotoDelete } from "./PhotoDelete";
@@ -13,7 +14,7 @@ export const PhotoContent = () => {
   return (
     <div className={s.photo}>
       <div className={s.img}>
-        <img src={modalPhoto.src} alt="modalPhoto.title" />
+        <Image src={modalPhoto.src} alt={modalPhoto.title} />
       </div>
       <div className={s.details}>
         <div>
