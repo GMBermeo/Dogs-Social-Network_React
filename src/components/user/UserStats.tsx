@@ -1,5 +1,10 @@
 import React from "react";
+import { Loading } from "../ui";
 
 export const UserStats = () => {
-  return <div>UserStats</div>;
+  return (
+    <div>
+      <Loading />
+    </div>
+  );
 };

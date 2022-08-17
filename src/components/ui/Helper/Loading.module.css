@@ -1,0 +1,13 @@
+.wrapper {
+  @apply absolute top-0 left-0 flex h-screen w-full;
+  z-index: 1000;
+}
+
+.loading {
+  @apply m-auto flex items-center justify-center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  padding-left: 5px;
+  background: rgba(255, 255, 255, 0.5);
+}

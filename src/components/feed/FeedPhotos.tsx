@@ -3,7 +3,7 @@ import { PHOTOS_GET } from "../../lib/api";
 import { useFetch } from "../../lib/hooks";
 import { Error, Loading } from "../ui";
 import { FeedPhotosItem } from "./FeedPhotosItem";
-import { Photo, PhotoDetails } from "../../lib/types/Photo";
+import { TPhoto } from "../../lib/types/TPhoto";
 import s from "./FeedPhotos.module.css";
 
 export const FeedPhotos = () => {
@@ -17,13 +17,13 @@ export const FeedPhotos = () => {
     fetchPhotos();
   }, [request]);
 
-  error && <Error error={error} />;
   loading && <Loading />;
+  error && <Error error={error} />;
   if (data) {
     return (
       <div>
         <ul className={`${s.feed} animeLeft`}>
-          {data.map((photo: Photo) => (
+          {data.map((photo: TPhoto) => (
             <FeedPhotosItem key={photo.id} photo={photo} />
           ))}
         </ul>
