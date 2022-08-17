@@ -3,16 +3,13 @@
 }
 
 .img {
-  display: block;
-  max-width: 100%;
+  @apply block max-w-full rounded opacity-0 duration-200;
   grid-area: 1/1;
-  opacity: 0;
-  transition: 0.2s;
 }
 
 .skeleton {
+  @apply h-full rounded;
   grid-area: 1/1;
-  height: 100%;
   background-image: linear-gradient(90deg, #eee 0, #fff 50%, #eee 100%);
   background-color: #eee;
   background-size: 200%;

@@ -1,6 +1,5 @@
 import React from "react";
 import { TPhoto, TPhotoDetails } from "../lib/types/TPhoto";
-import { TModalContextValue } from "../lib/types/TModal";
 
 export const ModalContext = React.createContext(null as any);
 

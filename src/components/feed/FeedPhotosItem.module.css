@@ -12,7 +12,7 @@
 }
 
 .photo span {
-  @apply flex items-center justify-center text-white opacity-0 duration-100 hover:opacity-100;
+  @apply flex items-center justify-center rounded text-white opacity-0 duration-100 hover:opacity-100;
   background: rgba(0, 0, 0, 0.3);
   grid-area: 1/1;
 }

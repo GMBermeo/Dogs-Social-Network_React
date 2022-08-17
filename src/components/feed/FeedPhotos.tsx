@@ -4,20 +4,21 @@ import { useFetch } from "../../lib/hooks";
 import { Error, Loading } from "../ui";
 import { FeedPhotosItem } from "./FeedPhotosItem";
 import { TPhoto } from "../../lib/types/TPhoto";
+import { TFeedProps } from "../../lib/types/TFeed";
 import s from "./FeedPhotos.module.css";
 
-export const FeedPhotos = () => {
-  const { data, loading, error, request } = useFetch();
+export const FeedPhotos = ({ user, page, total, setInfinite }: TFeedProps) => {
+  const { data, error, request } = useFetch();
 
   React.useEffect(() => {
     async function fetchPhotos(): Promise<void> {
-      const { url, options } = PHOTOS_GET({ page: 1, total: 6, user: 0 });
-      const { json } = await request(url, options);
+      const { url, options } = PHOTOS_GET({ page, total, user });
+      const { response, json } = await request(url, options);
+      if (response && response.ok && json.length < total) setInfinite(false);
     }
     fetchPhotos();
-  }, [request]);
+  }, [request, user, page, setInfinite]);
 
-  loading && <Loading />;
   error && <Error error={error} />;
   if (data) {
     return (
@@ -29,5 +30,5 @@ export const FeedPhotos = () => {
         </ul>
       </div>
     );
-  } else return null;
+  } else return <Loading />;
 };
