@@ -5,6 +5,10 @@
   animation: scaleUp 0.3s forwards;
 }
 
+.single.photo {
+  @apply h-auto grid-cols-1;
+}
+
 @keyframes scaleUp {
   to {
     opacity: 1;
@@ -16,12 +20,17 @@
   @apply px-8 pt-8 pb-0;
 }
 
+.single .details {
+  padding: 1rem 0 0 0;
+}
+
 .img {
   grid-row: 1/4;
 }
 
-.comments {
-  @apply py-0 px-8;
+.single .img {
+  @apply rounded-md;
+  grid-row: 1;
 }
 
 @media (max-width: 64rem) {

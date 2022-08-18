@@ -1,10 +1,14 @@
 .comments {
-  overflow-y: auto;
+  @apply overflow-y-visible py-0 px-8 lg:overflow-y-auto;
+  /* overflow-y: auto; */
   word-break: break-word;
-  padding: 0 2rem;
+}
+
+.single.comments {
+  @apply p-0;
 }
 
 .comments li {
-  margin-bottom: 0.5rem;
+  @apply mb-2;
   line-height: 1.2;
 }

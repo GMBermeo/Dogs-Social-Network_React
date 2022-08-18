@@ -5,8 +5,12 @@ import { useFetch } from "../../lib/hooks";
 import { TComment } from "../../lib/types/TComment";
 import { PhotoCommentForm } from "./PhotoCommentsForm";
 import s from "./PhotoComments.module.css";
+import { Loading } from "../ui";
 
-export const PhotoComments = (props: { id: number }) => {
+export const PhotoComments = (props: {
+  id: number;
+  single: boolean | undefined;
+}) => {
   const commentsSection = React.useRef<any>(null);
   const { login } = React.useContext(UserContext);
   const [comments, setComments] = React.useState<TComment[]>();
@@ -28,19 +32,24 @@ export const PhotoComments = (props: { id: number }) => {
     }
   }, [comments]);
 
-  loading && <p>Loading...</p>;
+  loading && <Loading />;
   return (
     <>
-      <ul ref={commentsSection} className={s.comments}>
+      <ul
+        ref={commentsSection}
+        className={`${s.comments} ${props.single ? s.single : ""}`}
+      >
         {comments &&
           comments.map((comment) => (
             <li key={comment.comment_ID}>
-              <b>{comment.comment_author}</b>
+              <b>@{comment.comment_author}: </b>
               <span>{comment.comment_content}</span>
             </li>
           ))}
       </ul>
-      {login && <PhotoCommentForm setComments={setComments} />}
+      {login && (
+        <PhotoCommentForm single={props.single} setComments={setComments} />
+      )}
     </>
   );
 };

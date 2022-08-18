@@ -7,7 +7,10 @@ import { COMMENT_POST } from "../../lib/api";
 import { Error } from "../ui/Helper/Error";
 import s from "./PhotoCommentsForm.module.css";
 
-export const PhotoCommentForm = ({ setComments }: any) => {
+export const PhotoCommentForm = (
+  { setComments }: any,
+  single: boolean | undefined
+) => {
   const { request, error } = useFetch();
   const login = React.useContext(UserContext);
   const { modalPhoto } = React.useContext(ModalContext);
@@ -24,7 +27,10 @@ export const PhotoCommentForm = ({ setComments }: any) => {
   }
 
   return (
-    <form onSubmit={sendComment} className={s.form}>
+    <form
+      onSubmit={sendComment}
+      className={`${s.form} ${single ? s.single : ""}`}
+    >
       <textarea
         id="comment"
         name="comment"

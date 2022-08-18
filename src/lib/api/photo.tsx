@@ -24,7 +24,7 @@ export function PHOTOS_GET({ page, total, user }: TPhotosGet) {
   };
 }
 
-export function PHOTO_GET(id: number) {
+export function PHOTO_GET(id: number | string) {
   return {
     url: `${API_URL}api/photo/${id}`,
     options: {

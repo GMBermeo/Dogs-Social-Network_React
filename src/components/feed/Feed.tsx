@@ -4,7 +4,7 @@ import { FeedPhotos } from "./FeedPhotos";
 import { ModalContext } from "../../contexts/ModalContext";
 
 export const Feed = ({ user }: any) => {
-  const { modalOpen } = React.useContext(ModalContext);
+  const { modalOpen } = React.useContext(ModalContext) ?? {};
   const [pages, setPages] = React.useState([1]);
   const [infinite, setInfinite] = React.useState<boolean>(true);
   // const [modalPhoto, setModalPhoto] = React.useState<Photo>();
