@@ -25,3 +25,16 @@ export function TOKEN_VALIDATE_POST(token: string) {
     },
   };
 }
+
+export function PASSWORD_LOST(body: any) {
+  return {
+    url: API_URL + "api/password/lost",
+    options: {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    },
+  };
+}

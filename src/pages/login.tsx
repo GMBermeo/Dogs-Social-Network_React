@@ -8,6 +8,7 @@ import {
   ForgotPassword,
   PasswordReset,
 } from "../components/auth";
+import { NotFound } from "./notFound";
 
 export const Login = () => {
   const { login } = React.useContext(UserContext);
@@ -19,8 +20,9 @@ export const Login = () => {
         <Routes>
           <Route path="/" element={<LoginView />} />
           <Route path="signup" element={<SignUpView />} />
-          <Route path="ForgotPassword" element={<ForgotPassword />} />
-          <Route path="Reset" element={<PasswordReset />} />
+          <Route path="forgotPassword" element={<ForgotPassword />} />
+          <Route path="reset" element={<PasswordReset />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </section>

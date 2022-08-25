@@ -34,7 +34,7 @@ export const LoginView = () => {
         )}
       </form>
 
-      <Link to="/login/lost" className={s.perdeu}>
+      <Link to="/login/forgotPassword" className={s.perdeu}>
         Lost password?
       </Link>
       <div className={s.signup}>

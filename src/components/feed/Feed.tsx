@@ -3,13 +3,14 @@ import { FeedModal } from "./FeedModal";
 import { FeedPhotos } from "./FeedPhotos";
 import { ModalContext } from "../../contexts/ModalContext";
 
-export const Feed = ({ user }: any) => {
+export const Feed = ({ user = 0 }: any) => {
   const { modalOpen } = React.useContext(ModalContext) ?? {};
   const [pages, setPages] = React.useState([1]);
   const [infinite, setInfinite] = React.useState<boolean>(true);
   // const [modalPhoto, setModalPhoto] = React.useState<Photo>();
 
   React.useEffect(() => {
+    console.log(user);
     let wait = false;
     function infiniteScroll() {
       if (infinite) {
