@@ -1,5 +1,5 @@
 .form {
-  @apply pl-8;
+  @apply pl-4;
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: stretch;
@@ -7,7 +7,7 @@
 }
 
 .single.form {
-  @apply mx-0 my-4;
+  @apply mx-0 my-4 px-0;
 }
 
 .textarea {

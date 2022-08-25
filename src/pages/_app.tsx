@@ -9,6 +9,7 @@ import { PrivateRoute } from "../components/auth";
 import { UserStorage } from "../contexts/UserContext";
 import { ModalStorage } from "../contexts/ModalContext";
 import { Photo } from "../components/photo/Photo";
+import { UserProfile } from "../components/user";
 
 export function App() {
   return (
@@ -20,6 +21,7 @@ export function App() {
             <Route path="/" element={<Home />} />
             <Route path="login/*" element={<Login />} />
             <Route path="photo/:id" element={<Photo />} />
+            <Route path="profile/:user" element={<UserProfile />} />
             <Route
               path="myAccount/*"
               element={

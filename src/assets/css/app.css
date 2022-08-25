@@ -47,4 +47,5 @@ input {
 
 .mainContainer {
   @apply mt-8 md:mt-12 xl:mt-16;
+  min-height: 80vh;
 }

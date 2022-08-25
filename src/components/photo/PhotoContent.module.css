@@ -6,7 +6,7 @@
 }
 
 .single.photo {
-  @apply h-auto grid-cols-1;
+  @apply h-auto grid-cols-1 overflow-y-hidden;
 }
 
 @keyframes scaleUp {
