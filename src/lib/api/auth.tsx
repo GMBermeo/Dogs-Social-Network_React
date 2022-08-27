@@ -38,3 +38,16 @@ export function PASSWORD_LOST(body: any) {
     },
   };
 }
+
+export function PASSWORD_RESET(body: any) {
+  return {
+    url: API_URL + "api/password/reset",
+    options: {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    },
+  };
+}
