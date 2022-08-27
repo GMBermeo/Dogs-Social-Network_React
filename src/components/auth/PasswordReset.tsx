@@ -3,6 +3,7 @@ import { useNavigate, useNavigationType } from "react-router-dom";
 import { URLSearchParams } from "url";
 import { PASSWORD_RESET } from "../../lib/api";
 import { useFetch, useForm } from "../../lib/hooks";
+import { Head } from "../common";
 import { Button, Error, Input } from "../ui";
 
 export const PasswordReset = () => {
@@ -13,11 +14,13 @@ export const PasswordReset = () => {
   const navigate = useNavigate();
 
   React.useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const key = params.get("key");
-    const login = params.get("login");
-    if (key) setKey(key);
-    if (login) setLogin(login);
+    // 💥NOT WORKING💥
+    // 💥Uncaught Error: Module "url" has been externalized for browser compatibility. Cannot access "url.URLSearchParams" in client code.💥
+    // const params = new URLSearchParams(window.location.search);
+    // const key = params.get("key");
+    // const login = params.get("login");
+    // if (key) setKey(key);
+    // if (login) setLogin(login);
   }, []);
 
   async function setNewPassword(event: { preventDefault: () => void }) {
@@ -35,6 +38,7 @@ export const PasswordReset = () => {
 
   return (
     <div>
+      <Head title="Set a new password" />
       <h1 className="title">Set a new password</h1>
       <form onSubmit={setNewPassword}>
         <Input

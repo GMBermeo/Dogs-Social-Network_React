@@ -1,6 +1,7 @@
 import React from "react";
 import { PASSWORD_LOST } from "../../lib/api";
 import { useFetch, useForm } from "../../lib/hooks";
+import { Head } from "../common";
 import { Button, Error, Input } from "../ui";
 
 export const ForgotPassword = () => {
@@ -21,6 +22,7 @@ export const ForgotPassword = () => {
 
   return (
     <section>
+      <Head title="Lost your password?" />
       <h1 className="title">Reset your password</h1>
       {data ? (
         <p className="text-green-600">{data}</p>

@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { PHOTO_POST } from "../../lib/api";
 import { useFetch, useForm } from "../../lib/hooks";
+import { Head } from "../common";
 import { Button, Error, Input, InputFile } from "../ui";
 import s from "./UserPhotoPost.module.css";
 
@@ -51,6 +52,7 @@ export const UserPhotoPost = () => {
 
   return (
     <section className={`${s.photoPost} animeLeft`}>
+      <Head title="Post a photo" />
       <form onSubmit={postPhoto}>
         <Input id="nome" label="Name" {...nome} />
         <Input id="peso" label="Weight" type="number" {...peso} />

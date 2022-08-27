@@ -2,6 +2,7 @@ import React from "react";
 import { UserContext } from "../../contexts/UserContext";
 import { USER_POST } from "../../lib/api";
 import { useForm, useFetch } from "../../lib/hooks/";
+import { Head } from "../common";
 import { Button, Error, Input } from "../ui";
 
 export const SignUpView = () => {
@@ -27,6 +28,7 @@ export const SignUpView = () => {
 
   return (
     <section className="animeLeft">
+      <Head title="Sign up" />
       <h1 className="title">Sign Up</h1>
 
       <form onSubmit={newUser}>

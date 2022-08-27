@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { ModalContext } from "../../contexts/ModalContext";
 import { PHOTO_GET } from "../../lib/api";
 import { useFetch } from "../../lib/hooks";
+import { Head } from "../common";
 import { Error, Loading } from "../ui";
 import { PhotoContent } from "./PhotoContent";
 
@@ -23,6 +24,7 @@ export const Photo = () => {
   if (data)
     return (
       <section className="mainContainer container">
+        <Head title={data.photo.title} />
         <PhotoContent single={true} data={data} />
       </section>
     );

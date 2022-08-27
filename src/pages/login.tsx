@@ -9,6 +9,7 @@ import {
   PasswordReset,
 } from "../components/auth";
 import { NotFound } from "./notFound";
+import { Head } from "../components/common";
 
 export const Login = () => {
   const { login } = React.useContext(UserContext);
@@ -16,6 +17,7 @@ export const Login = () => {
   if (login === true) return <Navigate to="/myAccount" />;
   return (
     <section className={s.login}>
+      <Head title="Login" />
       <div className={s.forms}>
         <Routes>
           <Route path="/" element={<LoginView />} />
