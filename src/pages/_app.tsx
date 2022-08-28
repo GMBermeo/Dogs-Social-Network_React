@@ -13,28 +13,32 @@ import { UserProfile } from "../components/user";
 
 export function App() {
   return (
-    <BrowserRouter>
-      <UserStorage>
-        <ModalStorage>
-          <Header />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="login/*" element={<Login />} />
-            <Route path="photo/:id" element={<Photo />} />
-            <Route path="profile/:user" element={<UserProfile />} />
-            <Route
-              path="myAccount/*"
-              element={
-                <PrivateRoute>
-                  <User />
-                </PrivateRoute>
-              }
-            />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-          <Footer />
-        </ModalStorage>
-      </UserStorage>
-    </BrowserRouter>
+    <div className="App">
+      <BrowserRouter>
+        <UserStorage>
+          <ModalStorage>
+            <Header />
+            <main className="AppBody">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="login/*" element={<Login />} />
+                <Route path="photo/:id" element={<Photo />} />
+                <Route path="profile/:user" element={<UserProfile />} />
+                <Route
+                  path="myAccount/*"
+                  element={
+                    <PrivateRoute>
+                      <User />
+                    </PrivateRoute>
+                  }
+                />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </main>
+            <Footer />
+          </ModalStorage>
+        </UserStorage>
+      </BrowserRouter>
+    </div>
   );
 }

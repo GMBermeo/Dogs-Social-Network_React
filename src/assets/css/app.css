@@ -47,5 +47,14 @@ input {
 
 .mainContainer {
   @apply mt-8 md:mt-12 xl:mt-16;
-  min-height: 80vh;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh+10rem);
+}
+
+.AppBody {
+  flex: 1;
 }

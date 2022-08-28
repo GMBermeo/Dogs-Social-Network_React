@@ -1,4 +1,9 @@
 .footer {
-  @apply flex h-[4rem] w-full items-center justify-center text-center;
+  @apply flex w-full flex-col items-center justify-center py-8 px-4 text-center;
   background: var(--primary-color);
+  color: #764701;
+}
+
+.footer p {
+  margin-top: 1rem;
 }
