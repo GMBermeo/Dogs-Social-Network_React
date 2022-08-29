@@ -1,6 +1,7 @@
 import React from "react";
 import { TOKEN_POST, USER_GET, TOKEN_VALIDATE_POST } from "../lib/api";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/router";
 import { TUserData, TUserContextValue } from "../lib/types/TUser";
 
 export const UserContext = React.createContext<TUserContextValue>(null as any);
@@ -10,7 +11,7 @@ export const UserStorage = ({ children }: any) => {
   const [login, setLogin] = React.useState(false);
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string>();
-  const navigate = useNavigate();
+  const navigate = useRouter();
 
   const userLogout = React.useCallback(
     async function () {
@@ -19,7 +20,7 @@ export const UserStorage = ({ children }: any) => {
       setLoading(false);
       setLogin(false);
       window.localStorage.removeItem("token");
-      navigate("/login");
+      navigate.push("/login");
     },
     [navigate]
   );
@@ -43,7 +44,7 @@ export const UserStorage = ({ children }: any) => {
       const { token } = await tokenRes.json();
       window.localStorage.setItem("token", token);
       await getUser(token);
-      navigate("/");
+      navigate.push("/");
     } catch (err) {
       userLogout();
       if (err instanceof Error) {

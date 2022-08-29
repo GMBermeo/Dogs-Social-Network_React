@@ -5,8 +5,8 @@ import { Head } from "../components/common/";
 export const Home = () => {
   return (
     <section className="mainContainer container">
-      <Head title="Photos" description="Home of dogs, with feed of photos." />
-      <Feed />
+      {/* <Head title="Photos" description="Home of dogs, with feed of photos." />
+      <Feed /> */}
     </section>
   );
 };
