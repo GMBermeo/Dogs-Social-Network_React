@@ -7,3 +7,4 @@ export {
 } from "./auth";
 export { USER_GET, USER_POST } from "./user";
 export { COMMENT_POST } from "./comment";
+export { GET_STATS } from "./stats";
