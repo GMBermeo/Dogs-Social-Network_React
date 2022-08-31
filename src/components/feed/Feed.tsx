@@ -10,7 +10,6 @@ export const Feed = ({ user = 0 }: any) => {
   // const [modalPhoto, setModalPhoto] = React.useState<Photo>();
 
   React.useEffect(() => {
-    console.log(user);
     let wait = false;
     function infiniteScroll() {
       if (infinite) {

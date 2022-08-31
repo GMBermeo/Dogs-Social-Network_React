@@ -7,7 +7,6 @@ import { Button, Error, Input } from "../ui";
 export const ForgotPassword = () => {
   const login = useForm();
   const { data, loading, error, request } = useFetch();
-  console.log(window.location);
 
   async function sendResetEmail(event: { preventDefault: () => void }) {
     event.preventDefault();

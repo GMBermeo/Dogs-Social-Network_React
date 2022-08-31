@@ -1,0 +1,18 @@
+.graph {
+  @apply mb-8 grid grid-cols-2 gap-x-8;
+}
+
+.graphItem {
+  @apply grid items-center rounded-sm;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.total {
+  @apply col-span-full p-8 text-lg;
+}
+
+@media (max-width: 40rem) {
+  .graph {
+    @apply grid-cols-1;
+  }
+}
