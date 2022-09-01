@@ -4,7 +4,7 @@ import { VictoryPie, VictoryChart, VictoryBar } from "victory";
 import { TPhoto } from "../../lib/types/TPhoto";
 import { Error } from "../ui";
 
-export const UserStatsGraphs = ({ data }: any) => {
+const UserStatsGraphs = ({ data }: any) => {
   const [graph, setGraph] = React.useState();
   const [total, setTotal] = React.useState(0);
 
@@ -55,3 +55,5 @@ export const UserStatsGraphs = ({ data }: any) => {
     );
   else return <Error error={"No photos found."} />;
 };
+
+export default UserStatsGraphs;
