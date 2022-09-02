@@ -20,7 +20,7 @@ export const ForgotPassword = () => {
   }
 
   return (
-    <section>
+    <section className="animeLeft">
       <Head title="Lost your password?" />
       <h1 className="title">Reset your password</h1>
       {data ? (

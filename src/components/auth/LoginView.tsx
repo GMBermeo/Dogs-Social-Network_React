@@ -26,7 +26,7 @@ export const LoginView = () => {
       <form onSubmit={handleLogin} className={s.form}>
         <Input id="username" label="Username" {...username} />
         <Input id="password" label="Password" type="password" {...password} />
-        {error && <Error error={error} />}
+        {error && <Error error={error && "Incorreted login or password."} />}
         {loading ? (
           <Button disabled>Loading...</Button>
         ) : (

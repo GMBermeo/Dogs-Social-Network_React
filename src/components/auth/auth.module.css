@@ -46,4 +46,5 @@
 
 .forms {
   @apply mx-auto w-full max-w-md p-0 sm:max-w-lg sm:p-4 2xl:max-w-lg;
+  margin-top: 20vh;
 }
