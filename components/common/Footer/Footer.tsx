@@ -1,12 +1,11 @@
 import React from "react";
-import s from "./Footer.module.css";
 // import DogsFooterSVG from "@public/svg/dogs-footer.svg";
 
 export const Footer = () => {
   return (
-    <footer className={s.footer}>
+    <footer className="text-dark bg-primary flex w-full flex-col items-center justify-center py-8 px-4 text-center ">
       {/* <DogsFooterSVG /> */}
-      <p>Dogs. Alguns direitos reservados.</p>
+      <p className="mt-4">Dogs. Alguns direitos reservados.</p>
     </footer>
   );
 };

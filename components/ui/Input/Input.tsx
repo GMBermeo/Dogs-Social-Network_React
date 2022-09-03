@@ -1,6 +1,6 @@
 import React from "react";
 import s from "./Input.module.css";
-import { InputProps } from "../../../lib/types/Input";
+import { TInputProps } from "../../../lib/types/TInput";
 
 export const Input = ({
   id,
@@ -10,7 +10,7 @@ export const Input = ({
   type = "text",
   error,
   onBlur,
-}: InputProps) => {
+}: TInputProps) => {
   return (
     <div className={s.wrapper}>
       <label className={s.label} htmlFor={id}>

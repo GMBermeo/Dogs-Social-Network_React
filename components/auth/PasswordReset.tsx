@@ -44,7 +44,7 @@ export const PasswordReset = () => {
         <Input
           label="New password"
           type="password"
-          name="password"
+          id="password"
           {...password}
         />
         {loading ? (

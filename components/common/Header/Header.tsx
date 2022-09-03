@@ -1,18 +1,18 @@
-import React from "react";
+import React, { FC } from "react";
 import s from "./Header.module.css";
 // import { Link } from "react-router-dom";
 import Link from "next/link";
-// import { ReactComponent as LogoDogs } from "../../../assets/svg/dogs.svg";
-import { UserContext } from "../../../contexts/UserContext";
+// import LogoDogsSVG from "../../../svg/dogs.svg";
+import { UserContext } from "@contexts/UserContext";
 
-export const Header = () => {
+export const Header: FC = () => {
   const { data, userLogout } = React.useContext(UserContext) || {};
 
   return (
-    <header className={s.header}>
-      <nav className={`${s.nav} container`}>
+    <header className="fixed top-0 z-50 w-full bg-white drop-shadow">
+      <nav className="container flex h-[4rem] items-center justify-between">
         <Link href="/" aria-label="Home" className={s.logo}>
-          {/* <LogoDogs /> */}link
+          {/* <LogoDogsSVG /> */}home
         </Link>
         {data ? (
           <div className="inline-flex gap-x-4">

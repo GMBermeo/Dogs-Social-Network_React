@@ -7,6 +7,7 @@ export const Home = () => {
     <section className="mainContainer container">
       {/* <Head title="Photos" description="Home of dogs, with feed of photos." />
       <Feed /> */}
+      Home page
     </section>
   );
 };

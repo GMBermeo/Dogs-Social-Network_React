@@ -1,12 +1,14 @@
 # Curso de React
+
 ## com Hooks e React Router 6
 
 - 108 Aulas
 - 18 Horas de Vídeo
 
 ## Objetivo
+
 Aprender a criar um aplicativo web com funcionalidades parecidas de redes sociais como o Instagram.
-O foco do curso é no entendimento completo do React, com isso praticamente tudo será criado do zero, *sem* a dependência de pacotes externos.
+O foco do curso é no entendimento completo do React, com isso praticamente tudo será criado do zero, _sem_ a dependência de pacotes externos.
 
 [Curso disponível em Origamid](https://www.origamid.com/curso/react-completo)
 
@@ -25,7 +27,7 @@ O foco do curso é no entendimento completo do React, com isso praticamente tudo
 
 Depois do clone, acessar a pasta `appreact` via `cd` e executar:
 
-### Instalação de dependências 
+### Instalação de dependências
 
 ```
 yarn install
@@ -132,7 +134,7 @@ Tudo isso pode ser removido.
   - 0821 Feed Modal
   - 0822 Comentário Post
   - 0823 Comentário Estilo
-0824 Foto Delete
+    0824 Foto Delete
   - 0825 Image Skeleton
   - 0826 Loading
   - 0827 Scroll Infinito

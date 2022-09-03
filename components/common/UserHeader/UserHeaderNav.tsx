@@ -3,10 +3,10 @@ import { NavLink, useLocation } from "react-router-dom";
 import { UserContext } from "../../../contexts/UserContext";
 import { useMedia } from "../../../lib/hooks";
 import s from "./UserHeaderNav.module.css";
-import { ReactComponent as FeedIcon } from "../../../assets/svg/feed.svg";
-import { ReactComponent as StatsIcon } from "../../../assets/svg/stats.svg";
-import { ReactComponent as PostIcon } from "../../../assets/svg/post.svg";
-import { ReactComponent as LogoutIcon } from "../../../assets/svg/logout.svg";
+import FeedIconSVG from "@public/svg/feed.svg";
+import StatsIconSVG from "@public/svg/stats.svg";
+import PostIconSVG from "@public/svg/post.svg";
+import LogoutIconSVG from "@public/svg/logout.svg";
 
 export const UserHeaderNav = () => {
   const { userLogout } = React.useContext(UserContext);
@@ -38,19 +38,19 @@ export const UserHeaderNav = () => {
         }`}
       >
         <NavLink to="/myAccount" end>
-          <FeedIcon />
+          <FeedIconSVG />
           {mobile && "My Feed"}
         </NavLink>
         <NavLink to="stats">
-          <StatsIcon />
+          <StatsIconSVG />
           {mobile && "Stats"}
         </NavLink>
         <NavLink to="post">
-          <PostIcon />
+          <PostIconSVG />
           {mobile && "Post photo"}
         </NavLink>
         <button onClick={userLogout}>
-          <LogoutIcon />
+          <LogoutIconSVG />
           {mobile && "Logout"}
         </button>
       </nav>

@@ -11,8 +11,8 @@ import {
 import { NotFound } from "./notFound";
 import { Head } from "../components/common";
 
-export const Login = () => {
-  const { login } = React.useContext(UserContext);
+const Login = () => {
+  const { login } = React.useContext(UserContext) ?? {};
 
   if (login === true) return <Navigate to="/myAccount" />;
   return (
@@ -30,3 +30,5 @@ export const Login = () => {
     </section>
   );
 };
+
+export default Login;

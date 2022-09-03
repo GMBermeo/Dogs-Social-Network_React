@@ -28,12 +28,7 @@ export const ForgotPassword = () => {
         <p className="text-green-600">{data}</p>
       ) : (
         <form onSubmit={sendResetEmail}>
-          <Input
-            label="E-mail / Username"
-            type="text"
-            name="login"
-            {...login}
-          />
+          <Input id="login" label="E-mail / Username" type="text" {...login} />
           {loading ? (
             <Button disabled>Sending...</Button>
           ) : (

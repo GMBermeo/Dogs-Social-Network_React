@@ -1,9 +1,5 @@
 .header {
-  @apply fixed top-0 z-50 w-full bg-white drop-shadow;
-}
-
-.nav {
-  @apply flex h-[4rem] items-center justify-between;
+  background-color: red;
 }
 
 .logo {
@@ -19,5 +15,5 @@
   width: 14px;
   height: 17px;
   top: -1px;
-  background: url(../../../assets/svg/usuario.svg) no-repeat center center;
+  background: url(/svg/usuario.svg) no-repeat center center;
 }
