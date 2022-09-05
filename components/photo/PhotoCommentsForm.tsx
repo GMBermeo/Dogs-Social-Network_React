@@ -1,7 +1,7 @@
 import React from "react";
 import { ModalContext } from "../../contexts/ModalContext";
 import { UserContext } from "../../contexts/UserContext";
-import SendSVG from "../../assets/svg/send.svg";
+import SendSVG from "@public/svg/send.svg";
 import { useFetch } from "../../lib/hooks";
 import { COMMENT_POST } from "../../lib/api";
 import { Error } from "../ui/Helper/Error";

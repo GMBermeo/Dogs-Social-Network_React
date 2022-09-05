@@ -1,8 +1,9 @@
 import React from "react";
 import { Feed } from "../components/feed/Feed";
 import { Head } from "../components/common/";
+import { NextPage } from "next";
 
-export const Home = () => {
+const Home: NextPage = () => {
   return (
     <section className="mainContainer container">
       {/* <Head title="Photos" description="Home of dogs, with feed of photos." />
@@ -11,3 +12,4 @@ export const Home = () => {
     </section>
   );
 };
+export default Home;

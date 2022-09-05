@@ -1,6 +1,7 @@
+import { NextPage } from "next";
 import React from "react";
 
-export const NotFound = () => {
+const NotFound: NextPage = () => {
   return (
     <div className="mainContainer container">
       <h1>Error: 404</h1>
@@ -8,3 +9,4 @@ export const NotFound = () => {
     </div>
   );
 };
+export default NotFound;

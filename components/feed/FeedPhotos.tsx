@@ -17,7 +17,7 @@ export const FeedPhotos = ({ user, page, total, setInfinite }: TFeedProps) => {
       if (response && response.ok && json.length < total) setInfinite(false);
     }
     fetchPhotos();
-  }, [request, user, page, setInfinite]);
+  }, [request, user, page, setInfinite, total]);
 
   error && <Error error={error} />;
   if (data) {

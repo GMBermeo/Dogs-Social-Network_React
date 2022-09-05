@@ -3,11 +3,12 @@ import { Route, Routes } from "react-router-dom";
 import { UserHeader, UserPhotoPost, UserStats } from "../components/user";
 import { Feed } from "../components/feed/Feed";
 import { UserContext } from "../contexts/UserContext";
-import { NotFound } from "./notFound";
+import NotFound from "./notFound";
 import { Head } from "../components/common";
+import { NextPage } from "next";
 
-export const User = () => {
-  const { data } = React.useContext(UserContext);
+const User: NextPage = () => {
+  const { data } = React.useContext(UserContext) ?? {};
 
   return (
     <section className="container">
@@ -22,3 +23,5 @@ export const User = () => {
     </section>
   );
 };
+
+export default User;

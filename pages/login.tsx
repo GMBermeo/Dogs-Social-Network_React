@@ -8,13 +8,13 @@ import {
   ForgotPassword,
   PasswordReset,
 } from "../components/auth";
-import { NotFound } from "./notFound";
+import NotFound from "./notFound";
 import { Head } from "../components/common";
 
 const Login = () => {
   const { login } = React.useContext(UserContext) ?? {};
 
-  if (login === true) return <Navigate to="/myAccount" />;
+  if (login && login === true) return <Navigate to="/myAccount" />;
   return (
     <section className={s.login}>
       <Head title="Login" />

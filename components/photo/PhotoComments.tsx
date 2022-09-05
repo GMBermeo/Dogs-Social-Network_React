@@ -24,7 +24,7 @@ export const PhotoComments = (props: {
       setComments(jsonComments);
     };
     fetchData();
-  }, [props.id]);
+  }, [props.id, request]);
 
   React.useEffect(() => {
     if (commentsSection.current) {

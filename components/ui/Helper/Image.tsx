@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { SyntheticEvent } from "react";
 import s from "./Image.module.css";
 import { TImageProps } from "../../../lib/types/TImage";

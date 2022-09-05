@@ -40,7 +40,7 @@
 .login::before {
   @apply hidden sm:block;
   content: "";
-  background: url("/images/login.jpg") no-repeat center center;
+  /* background: url("/images/login.jpg") no-repeat center center; */
   background-size: cover;
 }
 
